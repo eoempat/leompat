@@ -23,7 +23,11 @@ class RouteServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        Route::pattern('category', "['0-9']+");
+
+        Route::bind('user', function(){
+            return \App\User::latest()->first();
+        });
 
         parent::boot();
     }
