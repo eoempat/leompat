@@ -23,7 +23,7 @@ Route::get('hellos', function(){
     return "Hello world!";
 })->name('hello');
 
-Route::get('test-index', "TestController@index")->middleware('test:500');
+Route::get('test-index', "TestController@index");
 
 Route::redirect('redir', 'hello');
 
