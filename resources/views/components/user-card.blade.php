@@ -5,3 +5,11 @@
     <p class="card-text">{{ $content }}</p>
   </div>
 </div>
+
+@push('styles')
+  <style>
+    .card {
+      border-color: red;
+    }
+  </style>
+@endpush
